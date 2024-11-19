@@ -118,9 +118,8 @@ p {
     width: 100%; /* Make the nav span the full width of the screen */
     z-index: 100;
     background-color: rgba(69, 147, 218, 0.95);
-    padding: 1rem 2rem; /* Adjust padding for a more compact look */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-    border-bottom: 1px solid #ddd; /* Optional: Add a border for a toolbar effect */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .nav__logo {
@@ -253,7 +252,7 @@ p {
 }
 
 .upload-btn:hover {
-    background-color: #45a049;
+    background-color: var(--color-tertiary-darker);
 }
 
 /* Hide file input element */
