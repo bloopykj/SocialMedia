@@ -2,8 +2,10 @@
 :root{
     --color-primary: #99ccff;
     --color-secondary: #9966ff;
+    --color-tertiary: #4CAF50;
     --color-primary-darker: #3366ff;
     --color-secondary-darker: #6600cc;
+    --color-tertiary-darker: #2f6a31;
 }
 
 * {
@@ -237,5 +239,24 @@ p {
     opacity: 0;
 }
 
+/* Button to trigger file input */
+.upload-btn {
+    padding: 10px 20px;
+    background-color: var(--color-tertiary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 
+}
 
+.upload-btn:hover {
+    background-color: #45a049;
+}
+
+/* Hide file input element */
+#file-upload {
+    display: none;
+}

@@ -8,6 +8,33 @@ const nav = document.querySelector('.nav');
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
+// Get the button and file input element
+const uploadBtn = document.getElementById('upload-btn');
+const fileInput = document.getElementById('file-upload');
+
+// Add event listener to button to trigger file input
+uploadBtn.addEventListener('click', function () {
+    fileInput.click();
+});
+
+// Add event listener to file input when a file is selected
+fileInput.addEventListener('change', function () {
+    const file = fileInput.files[0];  // Get the selected file
+
+    if (file && file.type.startsWith('image')) {
+        const reader = new FileReader();  // Create a FileReader to read the file
+        reader.onload = function (e) {
+            // Set the body background to the uploaded image
+            document.body.style.backgroundImage = `url(${e.target.result})`;
+            document.body.style.backgroundSize = 'cover';  // Ensure the image covers the whole body
+            document.body.style.backgroundPosition = 'center';  // Center the image
+            document.body.style.backgroundAttachment = 'fixed';  // Optional: Make the background fixed
+        };
+        reader.readAsDataURL(file);  // Convert the image to a data URL
+    } else {
+        alert('Please upload a valid image file.');
+    }
+});
 
 /*****************************************************************************************/
 // Modal window
