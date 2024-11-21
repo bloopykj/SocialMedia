@@ -107,9 +107,98 @@ const handleHover = function (e) {
         logo.style.opacity = this;
     }
 };
-
 // Passing "argument" into handler
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
 
+/*****************************************************************************************/
 
+// Fake friends data
+const friends = [
+    "Alice Johnson",
+    "Bob Smith",
+    "Catherine Lee",
+    "David Brown",
+    "Ella Martinez",
+    "Franklin Wilson",
+    "Grace Adams",
+    "Hannah Garcia"
+];
+
+// Function to render the friends list
+function renderFriendsList() {
+    const friendsList = document.getElementById('friendsList');
+    friends.forEach(friend => {
+        const li = document.createElement('li');
+        li.textContent = friend;
+        friendsList.appendChild(li);
+    });
+}
+
+// Toggle Edit Profile
+function toggleEdit() {
+    const nameDisplay = document.getElementById('profileName');
+    const bioDisplay = document.getElementById('profileBio');
+    const nameInput = document.getElementById('editNameInput');
+    const bioInput = document.getElementById('editBioInput');
+    const editButton = document.getElementById('editProfileButton');
+    const saveButton = document.getElementById('saveProfileButton');
+
+    // Switch to edit mode
+    nameInput.value = nameDisplay.textContent;
+    bioInput.value = bioDisplay.textContent;
+
+    nameDisplay.style.display = 'none';
+    bioDisplay.style.display = 'none';
+    nameInput.style.display = 'block';
+    bioInput.style.display = 'block';
+    editButton.style.display = 'none';
+    saveButton.style.display = 'inline-block';
+}
+
+// Save Profile Changes
+function saveProfile() {
+    const nameDisplay = document.getElementById('profileName');
+    const bioDisplay = document.getElementById('profileBio');
+    const nameInput = document.getElementById('editNameInput');
+    const bioInput = document.getElementById('editBioInput');
+    const editButton = document.getElementById('editProfileButton');
+    const saveButton = document.getElementById('saveProfileButton');
+
+    // Save changes
+    nameDisplay.textContent = nameInput.value;
+    bioDisplay.textContent = bioInput.value;
+
+    nameDisplay.style.display = 'inline-block';
+    bioDisplay.style.display = 'inline-block';
+    nameInput.style.display = 'none';
+    bioInput.style.display = 'none';
+    editButton.style.display = 'inline-block';
+    saveButton.style.display = 'none';
+}
+
+// Adding new posts
+function addPost() {
+    const postContent = document.getElementById('newPostContent').value;
+    const postsContainer = document.getElementById('postsContainer');
+
+    if (postContent.trim() === '') return;
+
+    const postDiv = document.createElement('div');
+    postDiv.className = 'post';
+
+    postDiv.innerHTML = `
+        <div class="post-header">
+            <img src="profile-image.jpg" class="profile-img" alt="User">
+            <h3>John Doe</h3>
+        </div>
+        <div class="post-content">${postContent}</div>
+    `;
+    postsContainer.appendChild(postDiv);
+    document.getElementById('newPostContent').value = ''; // Clear textarea after posting
+}
+
+// Load friends list on page load
+window.onload = function() {
+    renderFriendsList();
+}

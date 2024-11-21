@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JohnDoe</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <img
+                src="img/UHD.jpg"
+                alt="social logo"
+                class="nav__logo"
+                id="logo"
+        />
+        <ul class="nav__links">
+            <li class="nav__item">
+                <a class="nav__link" href="index.html">Home</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="AboutUs.html">About Us</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link nav__link--btn btn--show-modal" href="#"
+                >Log In</a
+                >
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="modal hidden">
+    <button class="btn--close-modal">&times;</button>
+    <h2 class="modal__header">
+        Create Account or Log In
+    </h2>
+    <form class="modal__form">
+        <label>Email Address</label>
+        <input type="email" />
+        <label>Password</label>
+        <input type="password" />
+        <button class="btn">Create</button>
+        <button class="btn">Sign in</button>
+    </form>
+</div>
+<div class="overlay hidden"></div>
+
+<!-- Profile Section -->
+<div class="profile">
+    <div class="profile-cover">
+        <img src="img/test.jpg" alt="User Profile" class="profile-image">
+    </div>
+    <div class="profile-details">
+        <h1 id="profileName">John Doe</h1>
+        <input type="text" id="editNameInput" style="display: none;" />
+        <p id="profileBio">Software Engineer | Tech Enthusiast | Traveler</p>
+        <input type="text" id="editBioInput" style="display: none;" />
+        <div class="profile-actions">
+            <button id="editProfileButton" onclick="toggleEdit()">Edit Profile</button>
+            <button id="saveProfileButton" style="display: none;" onclick="saveProfile()">Save Changes</button>
+        </div>
+    </div>
+</div>
+
+<main class="profile-content">
+    <!-- Sidebar with Friends List -->
+    <aside class="sidebar">
+        <h2>Available Friends</h2>
+        <ul class="friends-list" id="friendsList">
+            <!-- Friends will be dynamically added here -->
+        </ul>
+    </aside>
+
+    <!-- Posts Section -->
+    <section class="posts">
+        <div class="post-box">
+            <textarea id="newPostContent" placeholder="What's on your mind, John?"></textarea>
+            <button onclick="addPost()">Post</button>
+        </div>
+
+        <!-- Posts will be dynamically added here -->
+        <div id="postsContainer"></div>
+    </section>
+</main>
+
+<!-- Button to open file dialog -->
+<button class="upload-btn" id="upload-btn">Upload Background Image</button>
+
+<!-- Hidden file input for image upload -->
+<input type="file" id="file-upload" accept="image/*" />
+
+</body>
+</html>
