@@ -12,6 +12,31 @@ const tabsContent = document.querySelectorAll('.operations__content');
 const uploadBtn = document.getElementById('upload-btn');
 const fileInput = document.getElementById('file-upload');
 
+// Modal window
+const openModal = function (e) {
+    e.preventDefault();
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+};
+
+const closeModal = function () {
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+};
+
+btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
+
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeModal();
+    }
+});
+
+/*****************************************************************************************/
+
 // Add event listener to button to trigger file input
 uploadBtn.addEventListener('click', function () {
     fileInput.click();
@@ -33,30 +58,6 @@ fileInput.addEventListener('change', function () {
         reader.readAsDataURL(file);  // Convert the image to a data URL
     } else {
         alert('Please upload a valid image file.');
-    }
-});
-
-/*****************************************************************************************/
-// Modal window
-const openModal = function (e) {
-    e.preventDefault();
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-};
-
-const closeModal = function () {
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
-};
-
-btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
-
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-        closeModal();
     }
 });
 
