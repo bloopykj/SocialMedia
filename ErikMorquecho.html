@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>Erik Morquecho</title>
+    <style>
+        body{
+            background-color: LightSlateGray;
+            font-family: system-ui;
+            color: Cornsilk;
+        }
+
+        .skills{
+            margin: flex;
+            justigy-content: space-between;
+            width:	100%;
+            padding: 10px;
+        }
+
+        .projects, .qualifications {
+            width: 45%;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 40%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 6px;
+            text-align: center;
+        }
+
+        .bouncyplum {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bouncyplum:hover {
+            transform: scale(1.1) rotate(-4deg);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function displayGreeting() {
+            const hours = new Date().getHours();
+            let greeting = "Hello, I'm Erik!";
+            if (hours < 12) greeting = "Good morning, ";
+            else if (hours < 18) greeting = "Good afternoon, ";
+            else greeting = "Good evening, ";
+
+            document.getElementById("greeting").textContent = greeting + "I'm Erik.";
+        }
+        window.onload = displayGreeting;
+    </script>
+</head>
+<body>
+<h1 id = "greeting"></h1>
+<div class = "intro">
+    <p> I'm a computer science student. I have an interest in machine learning, more
+        specifically neural networks. For my senior project I'd like to create a mobile app that helps users find their
+        face shape using convolutional neural networks.</p>
+    <p>Part of my projects includes working with replicating large language models using HuggingFace for medical datasets
+        so that a user may ask for information.</p>
+
+    <p>Additional machine learning projects include A3C models that learned how to drive a digital track without leaving
+        the track with obstacles through the road. Other applications were training A3C to play atari games such as Pacman and KungFu.</p>
+
+    <h2> You may be wondering what is A3C? Good Question!</h2>
+    <p>A3C (Asynchronous Advantage Actor-Critic) is a reinforcement learning algorithm that is used to train deep neural
+        networks to make decisions in an environment. It is designed to handle large and continuous action spaces,
+        making it useful for a wide range of tasks.Biggest advantage over other models is the ability to achieve
+        Asynchronous updates which allow for faster training.</p>
+</div>
+
+<div class = "skills">
+    <div class = "projects">
+        <caption> <strong> Projects </caption> </strong>
+        <ul>
+            <li>Med.GPT: Interactive large language model trained on medical data.</li>
+            <li>A3C Applied Game learning: Reinforced neural networks to play atari games </li>
+            <li>Finance Application: Android application used for budget and expense tracking </li>
+        </ul>
+    </div>
+
+    <div class = "qualifications">
+        <table border = "2">
+            <caption strong> Qualifications? </caption> </strong>
+            <tbody>
+            <tr>
+                <td>Python</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>✓</td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td>✓</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<img src = "plum.png" class = "bouncyplum"
+     alt = "Imagine picture of a plum">
+
+<p><a href = "https://www.github.com/Erikmore">GitHub</a></p>
+<p><a href = "https://www.linkedin.com/in/erik-morquecho-a346a6132/">LinkedIn</a></p>
+
+<img src="shortweek.gif" width-"200" height="200"
+alt = "working hard or hardly working">
+</body>
+</html>
