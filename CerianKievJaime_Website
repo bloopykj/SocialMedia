@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title>Headings</title>
+
+    <style type = "text/css">
+      p {background-color: aquamarine;
+         color:blueviolet;
+      }
+
+      body {
+          background-image: url("cookies.jpg");
+      }
+    
+      div {
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+
+        background-color: green;
+        position: relative;
+        animation-name: example;
+        animation-duration: 7s;
+      }
+
+      @keyframes example {
+        0% {background-color: green; left: 0px; right: 0px}
+        25% {background-color: red; left: 200px; right: 0px}
+        50% {background-color: yellow; left: 200px; right: 200px}
+        75% {background-color: red; left: 0px; right: 0px}
+        100% {background-color: green; left: 0px; right: 0px}
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Greetings!</h1>
+    
+    <h1>Here are my favorite sites:</h1>
+    <p><strong>Click a name to visit that site.</strong></p>
+
+    <!-- create four text hyperlinks -->
+    <p><a href = "http://www.newgrounds.com">Newgrounds</a></p>
+
+    <h1>Here is a picture of a cone:</h1>
+    <img src = "cone.svg" width = "92" height = "120"
+    alt = "Cone pic">    
+
+    <p>Hello! My name is Cerian Kiev Jaime and I am a senior at University of Houston Downtown majoring in Computer Science and have been here since 2023. I plan to graduate this Fall Semester with a bachelor’s degree. My hobbies are playing guitar and going online to find new obscure music and genres of music. I also enjoy programming with specialty in Java, Python, and C#, and am interested in creating websites as I think that the option of being a web programmer is a decent route to go on. By the end of the semester, I would like to create a social media website with my group that can have features that were present on old internet social media sites that are not present today, such as a customizable homepage. I also enjoy developing games in Unity using C#, and I recently took a Game Development class during the summer to expand my knowledge on game development which I really enjoyed as well. I was able to make an endless runner and had alot of fun making it, so I would like to make another game in a different genre. I look forward to the rest of the semester!
+    </p>
+
+
+    <style>
+      table, th, td {
+        border:1px solid black;
+      }
+    </style>
+
+    <p>Here are my favorite albums!</p>
+    <table style="width:100%">        
+      <tr>
+          <th>Rock</th>
+          <th>Shibuya Kei</th>
+          <th>Dream Pop</th>
+      </tr>
+      <tr>
+          <td>Loveless</td>
+          <td>In April</td>
+          <td>Uchuu Nippon Setagaya</td>
+      </tr>
+
+      <tr>
+          <td>School Girl Bye Bye</td>
+          <td>Yume</td>
+          <td>Let it Shine!</td>
+      </tr>
+  </table>
+
+  <p>Here are the programming languages I know:</p>
+
+  <ol>
+    <li>Python</li>
+    <li>Java</li>
+    <li>C++</li>
+    <li>C#</li>
+  </ol>
+
+  <div>
+      Hello!
+      
+  </div>
+
+  <button onclick="buttonClick()">Click me for the time!</button>
+  <p id = "demo"></p>
+  <script>
+    function buttonClick(){
+      document.getElementById('demo').innerHTML = Date();
+    }
+  </script>
+  </body>
+</html>
