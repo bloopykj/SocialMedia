@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('Reimu.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333; 
+            text-align: center;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            border: 5px solid #ff6f61; 
+        }
+
+        img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #ff6f61; 
+        }
+
+        a {
+            text-decoration: none;
+            color: #00796b; 
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #004d40; 
+        }
+
+        .animate {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            margin: 20px auto;
+            position: relative;
+            animation: slideIn 3s infinite;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Charlie Nghiem
+</header>
+
+<section>
+    <img src="1000001252.jpg" alt="Profile Picture">
+    <p style="color: blue; font-family: 'Courier New', monospace;">
+        Greetings! <span id="greetingMessage"></span><br>
+	I am a Senior at the University of Houston-Downtown, working hard to graduate in Spring 2025. 
+	Initially, I started as a Biochemistry major, but I found my passion in Computer Science.
+	I am now focused on completing my degree and preparing for a tech career.
+    </p>
+
+    <img src="Dgyv6khUcAAb8V1.jpg" alt="Fumos Collection">
+    <p style="color: blue; font-family: 'Courier New', monospace;">
+        Beyond education, I enjoy tabletop roleplaying games, video games, and collecting plushies called fumos.
+        If you're interested in learning more about fumos, you can visit the
+        <a href="https://fumo.website" target="_blank">Fumo Website</a>.
+    </p>
+
+    <button onclick="revealMessage()">Click to Reveal My Future Goals</button>
+    <p id="futureGoals" style="display: none; color: darkgreen; font-weight: bold;">
+        My goal is to become a software developer and contribute to innovative projects that make a difference!
+    </p>
+
+    <div class="animate"></div>
+
+    <table style="width: 331px; height: 192px;" border="1">
+        <tbody>
+            <tr>
+                <td>Hobbies</td>
+                <td>Genres</td>
+                <td>Comments</td>
+            </tr>
+            <tr>
+                <td>Video Games</td>
+                <td>JRPG, RPG, Strategy</td>
+                <td>I like games with stories that make me think.</td>
+            </tr>
+            <tr>
+                <td>Plushies</td>
+                <td>Fumos</td>
+                <td>Fumos are just plushies I love.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ol>
+        Computer Science Elective Classes Taken:
+        <li>Object Oriented Programming</li>
+        <li>Network Architecture</li>
+        <li>Game Development</li>
+        <li>Web Programming (Current)</li>
+    </ol>
+</section>
+
+<script>
+    // Function to display a greeting message based on the time of day
+    function setGreeting() {
+        const hours = new Date().getHours();
+        const greetingMessage = document.getElementById("greetingMessage");
+
+        if (hours < 12) {
+            greetingMessage.textContent = "Good morning!";
+        } else if (hours < 18) {
+            greetingMessage.textContent = "Good afternoon!";
+        } else {
+            greetingMessage.textContent = "Good evening!";
+        }
+    }
+
+    // Function to reveal a hidden message about future goals
+    function revealMessage() {
+        document.getElementById("futureGoals").style.display = "block";
+    }
+
+    // Call setGreeting to display the initial greeting message
+    setGreeting();
+</script>
+
+</body>
+</html>
