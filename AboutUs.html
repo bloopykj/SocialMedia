@@ -3,8 +3,90 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav__links {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        .nav__item {
+            margin: 0 15px;
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav__link:hover {
+            text-decoration: underline;
+        }
+
+        .about-us {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .about-us h1 {
+            font-size: 2.5rem;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .team-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .team-list li {
+            background: #e0e0f8;
+            margin: 10px auto;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .team-list a {
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        .team-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -47,8 +129,7 @@
     <main>
         <section class="about-us">
             <h1>About Us</h1>
-            <p>"Hello World!"
-We’re a team of students, dreamers, and doers with one goal: to create something awesome. Armed with coffee, creativity, and a love for technology, we’ve worked hard to make this project a reality. Meet the crew who made it happen!:</p>
+            <p>"Hello World!" We’re a team of students, dreamers, and doers with one goal: to create something awesome. Armed with coffee, creativity, and a love for technology, we’ve worked hard to make this project a reality. Meet the crew who made it happen!</p>
             <ul class="team-list">
                 <li>
                     <strong>Charlie Nghiem</strong> - Developer
