@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Alam's Personal Webpage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('C:/Users/unais/OneDrive/Pictures/Wallpaper/c0e68bf88f6e9bfa8bca69f1a1240656.jpg');
+            background-size: cover;
+            color: white;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            text-align: center; /* Center-aligning content */
+        }
+
+        .profile-image {
+            border-radius: 50%; /* Make image circular */
+            width: 150px;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto; /* Center the table */
+        }
+
+        table, th, td {
+            border: 1px solid white;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        a {
+            color: lightblue;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // JavaScript code to display a greeting based on the time of day
+        function displayGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            let greeting;
+
+            if (hours < 12) {
+                greeting = "Good morning, Muhammad Alam!";
+            } else if (hours < 18) {
+                greeting = "Good afternoon, Muhammad Alam!";
+            } else {
+                greeting = "Good evening, Muhammad Alam!";
+            }
+
+            const greetingElement = document.createElement("h2");
+            greetingElement.textContent = greeting;
+            greetingElement.style.color = "lightblue";
+            greetingElement.style.textAlign = "center";
+            document.body.prepend(greetingElement);
+        }
+
+        displayGreeting();
+    </script>
+
+    <div class="content">
+        <h1>Hello, I'm Muhammad Alam</h1>
+        <!-- Profile Image -->
+        <img src="C:/Users/unais/OneDrive/Pictures/Wallpaper/Sukuna_looking_down_on_Yuji_29.webp" alt="A picture of me" class="profile-image" />
+
+        <p><strong>Location:</strong> Richmond, TX</p>
+        <p><strong>Contact:</strong> (551)223-7594 | <a href="mailto:unais_alam@hotmail.com">unais_alam@hotmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/m-u-alam">linkedin.com/in/m-u-alam</a></p>
+
+        <h2>About Me</h2>
+        <p>
+            I'm a motivated computer science graduate with strong skills in programming languages like Java, Python, and C++. 
+            I am passionate about machine learning, data science, and web development, aiming to contribute to innovative projects in a forward-thinking company.
+        </p>
+
+        <h2>Technical Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> Python, Java, C++, Visual Basic, C</li>
+            <li><strong>Software:</strong> MS Office (Excel, Word), Git, Putty, Visual Studio</li>
+        </ul>
+
+        <h2>Education</h2>
+        <p><strong>University of Houston-Downtown (UHD), Houston, TX</strong> - Bachelor of Science in Computer Science (Expected: Dec 2024)</p>
+        <p>Honors: Dean’s List (2 out of 3 semesters)</p>
+        <p>Relevant Courses: Algorithms and Data Structures, Discrete Math, Visual Basic, Software Engineering</p>
+
+        <p><strong>Hudson County Community College, Jersey City, NJ</strong> - Associate of Science in Computer Science (Graduated May 2021)</p>
+        <p>Honors: Dean’s List (4 out of 4 semesters)</p>
+
+        <h2>Project Experience</h2>
+        <ul>
+            <li><strong>Web Page for Bank (Lead Programmer)</strong> - Developed a banking webpage using Python for various user roles to perform transactions.</li>
+            <li><strong>Machine Learning Classification for Parkinson's Disease</strong> - Created machine learning models to classify subjects using voice signal features, optimizing parameters for accuracy.</li>
+        </ul>
+
+        <h2>Work Experience</h2>
+        <ul>
+            <li><strong>General Manager, Twisted Turban, Houston, TX</strong> (Feb 2020 – Present) - Managed operations, maintained positive cash flow, and implemented systems to increase online sales by 20%.</li>
+            <li><strong>General Manager, Comfort Suits, Houston, TX</strong> (Jul 2020 – Jan 2022) - Led staff, improved customer satisfaction, and increased positive reviews through excellent communication and service.</li>
+        </ul>
+
+        <h2>Programming Languages I Know</h2>
+        <table>
+            <tr>
+                <th>Programming Language</th>
+                <th>Proficiency</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>Expert</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Intermediate</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Beginner</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Advanced</td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>Intermediate</td>
+            </tr>
+        </table>
+
+        <h2>Ask Me a Question</h2>
+        <form>
+            <label for="question">Ask me a question:</label><br>
+            <input type="text" id="question" name="question"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <p style="color: blue;">This is an example of blue-colored text.</p>
+        <p style="font-family: 'Courier New', Courier, monospace;">This text is in Courier New font.</p>
+    </div>
+</body>
+</html>
