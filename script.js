@@ -105,31 +105,6 @@ window.onload = function() {
 }
 
 /*****************************************************************************************/
-// Modal window
-const openModal = function (e) {
-    e.preventDefault();
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-};
-
-const closeModal = function () {
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
-};
-
-btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
-
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-        closeModal();
-    }
-});
-
-
-/*****************************************************************************************/
 // Add event listener to file input when a file is selected
 fileInput.addEventListener('change', function () {
     const file = fileInput.files[0];  // Get the selected file
@@ -204,4 +179,3 @@ const handleHover = function (e) {
 // Passing "argument" into handler
 nav.addEventListener('mouseover', handleHover.bind(0.5));
 nav.addEventListener('mouseout', handleHover.bind(1));
-
