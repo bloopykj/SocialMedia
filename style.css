@@ -21,9 +21,9 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-weight: 300;
-    color: #444;
+    color: #333;
     line-height: 1.9;
     background-color: #f3f3f3;
 }
@@ -432,8 +432,7 @@ p {
     max-width: 80%;
     margin: 50px auto; /* Center the box in the page */
     padding: 50px;
-    background: var(--color-primary);
-    border: 2px solid var(--color-primary-darker);
+    background: white;
     border-radius: 20px;
 }
 
@@ -441,9 +440,9 @@ p {
     flex: 1; /* Takes up available space */
     padding: 20px;
     flex-direction: column;
-    margin-left: 10%;
+    margin-left: 30%;
     text-align: center;
-    background: #7189e4;
+    background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 40%;
@@ -463,7 +462,8 @@ p {
 
 .image-collage {
     display: grid;
-    margin-left: 52%;
+    margin-left: 30%;
+    margin-top: 2%;
     grid-template-columns: repeat(2, 1fr); /* 2 images per row */
     gap: 10px;
     max-width: 45%;
@@ -491,4 +491,79 @@ p {
 
 .painting img:hover {
     transform: scale(1.15); /* zoom-in effect */
+}
+
+/*****************************************************************************************/
+/*MO Work*/
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(69, 147, 218, 0.95);
+    color: black;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+
+.about-us {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex-grow: 1;
+}
+
+.about-us h1 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.team-list li {
+    background: #f6f6f6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-list strong {
+    font-size: 1.2rem;
+    color: #003366;
+}
+
+.team-list a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fda085;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.team-list a:hover {
+    color: #ff7e5f;
 }
