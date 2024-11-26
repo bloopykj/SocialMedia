@@ -49,11 +49,11 @@
         </h2>
         <form class="modal__form">
             <label>Email Address</label>
-            <input type="email" />
+            <input type="email" id="email"/>
             <label>Password</label>
-            <input type="password" />
+            <input type="password" id="password"/>
             <button class="btn">Create</button>
-            <button class="btn">Sign in</button>
+            <button id="signIn" class="btn">Sign in</button>
         </form>
     </div>
     <div class="overlay hidden"></div>
@@ -79,5 +79,51 @@
 <footer>
     &copy; 2024 Café Culture. All Rights Reserved.
 </footer>
+    <script>
+    const modal = document.querySelector('.modal');
+    const overlay = document.querySelector('.overlay');
+    const btnCloseModal = document.querySelector('.btn--close-modal');
+    const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+
+    // Modal window
+    const openModal = function (e) {
+        e.preventDefault();
+        modal.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+    };
+
+    const closeModal = function () {
+        modal.classList.add('hidden');
+        overlay.classList.add('hidden');
+    };
+
+    btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
+
+    btnCloseModal.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+
+    // If escape button is pressed while the modal is showing, then the modal is closed.
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+
+    // Modal form submission
+    const user_Input = document.getElementById("signIn");
+    user_Input.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        // User input is saved here
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // If user inputted email and password match
+        if (email === "johndoe@hotmail.com" && password ==="1234567") {
+            window.location.href = "JohnDoe.html";
+        }
+
+    });
+    </script>
 </body>
 </html>
